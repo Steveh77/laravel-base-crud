@@ -22,8 +22,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="{{ route('home') }}">Home</span></a>
-                    <a class="nav-item nav-link" href="{{ route('books.index') }}">Books</a>
+                    <a class="nav-item nav-link @if (Route::is('home')) active @endif"
+                        href="{{ route('home') }}">Home</span></a>
+                    <a class="nav-item nav-link @if (Route::is('books.index')) active @endif"
+                        href="{{ route('books.index') }}">Books</a>
                 </div>
             </div>
         </nav>
